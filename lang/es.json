@@ -267,6 +267,8 @@
     "Task":"Tarea",
     "What's on your mind?":"Que tienes en mente?",
     "Create Task":"Crear Tarea",
-    "To Do List":"Lista de tareas pendientes"
-    
+    "To Do List":"Lista de tareas pendientes",
+    "Status": "Estado",
+    "Create Tasks":"Crear Tareas",
+    "Completed Task": "Completar Tarea"
 }
