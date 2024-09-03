@@ -18,44 +18,52 @@ To-Do List es una aplicación web que te permite gestionar tus tareas diarias de
 
 Para desplegar el proyecto en tu entorno local, sigue estos pasos:
 
-1. **Clonar el Repositorio**:
+1. **Requerimientos del Sistema**:
+    ```bash
+    PHP -v8.2.12
+    Composer -v2.7.8
+    7zip -24.08
+    Node JS -v20.17.0
+    ```
+
+2. **Clonar el Repositorio**:
     ```bash
     git clone https://github.com/bsalazar83/to-do-list.git
     cd to-do-list
     ```
 
-2. **Instala las Dependencias de PHP**:
+3. **Instala las Dependencias de PHP**:
     ```bash
     composer install
     ```
 
-3. **Configura el Entorno**:
+4. **Configura el Entorno**:
     Copia el archivo `.env.example` a `.env` y configura las variables de entorno según tus necesidades.
     ```bash
     cp .env.example .env
     ```
 
-4. **Genera la Clave de Aplicación**:
+5. **Genera la Clave de Aplicación**:
     ```bash
     php artisan key:generate
     ```
 
-5. **Ejecuta las Migraciones**:
+6. **Ejecuta las Migraciones**:
     ```bash
     php artisan migrate
     ```
 
-6. **Instala las Dependencias de Node.js**:
+7. **Instala las Dependencias de Node.js**:
     ```bash
     npm install
     ```
 
-7. **Construye los Estilos con TailwindCSS**:
+8. **Construye los Estilos con TailwindCSS**:
     ```bash
     npm run build
     ```
 
-8. **Inicia el Servidor de Desarrollo**:
+9. **Inicia el Servidor de Desarrollo**:
     ```bash
     php artisan serve
     ```
