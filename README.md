@@ -1,66 +1,78 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# To-Do List
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Descripción
 
-## About Laravel
+To-Do List es una aplicación web que te permite gestionar tus tareas diarias de manera eficiente. Con una interfaz intuitiva y un diseño moderno y dinamico, puedes añadir, editar y eliminar tareas, así como marcar las completadas.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Funcionalidades
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Registro de Usuarios**: Registro y manejo de la informacion de usuarios.
+- **Login**: Ingreso al aplicativo con un usuario unico.
+- **Añadir Tareas**: Permite agregar nuevas tareas a tu lista.
+- **Eliminar Tareas**: Puedes eliminar tareas especificas.
+- **Editar Tareas**: Modifica el contenido de tareas existentes.
+- **Marcar como Completadas**: Marca las tareas que has terminado.
+- **Visualizar Tareas**: Obten una lista de las tareas que han creado todos los usuarios.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Despliegue
 
-## Learning Laravel
+Para desplegar el proyecto en tu entorno local, sigue estos pasos:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. **Clonar el Repositorio**:
+    ```bash
+    git clone https://github.com/bsalazar83/to-do-list.git
+    cd to-do-list
+    ```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+2. **Instala las Dependencias de PHP**:
+    ```bash
+    composer install
+    ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+3. **Configura el Entorno**:
+    Copia el archivo `.env.example` a `.env` y configura las variables de entorno según tus necesidades.
+    ```bash
+    cp .env.example .env
+    ```
 
-## Laravel Sponsors
+4. **Genera la Clave de Aplicación**:
+    ```bash
+    php artisan key:generate
+    ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+5. **Ejecuta las Migraciones**:
+    ```bash
+    php artisan migrate
+    ```
 
-### Premium Partners
+6. **Instala las Dependencias de Node.js**:
+    ```bash
+    npm install
+    ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+7. **Construye los Estilos con TailwindCSS**:
+    ```bash
+    npm run build
+    ```
 
-## Contributing
+8. **Inicia el Servidor de Desarrollo**:
+    ```bash
+    php artisan serve
+    ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Tecnologías Usadas
 
-## Code of Conduct
+Este proyecto está desarrollado con las siguientes tecnologías:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- ![Laravel 11](https://img.shields.io/badge/Laravel-v11.21.0-brightgreen)
+- ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v3.1.0-blue)
+- ![Node.js](https://img.shields.io/badge/Node.js-v20.17.0-green)
+- ![AJAX/jQuery](https://img.shields.io/badge/AJAX/jQuery-3.6.0-blueviolet)
 
-## Security Vulnerabilities
+## Licencia
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Este proyecto está licenciado bajo la [MIT License](LICENSE).
 
-## License
+## Contacto
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto conmigo a través de [brandonsalazar545@gmail.com](mailto:brandonsalazar545@gmail.com).
