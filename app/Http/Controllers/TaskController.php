@@ -84,7 +84,16 @@ class TaskController extends Controller
      */
     public function edit($id)
     {
+        $task = Task::find($id);
 
+        if (!$task) {
+            return response()->json(['success' => false, 'message' => 'Task not found.'], 404);
+        }
+
+        return response()->json([
+            'success' => true,
+            'task' => $task
+        ]);
     }
 
     /**
@@ -92,7 +101,31 @@ class TaskController extends Controller
      */
     public function update(Request $request,$id)
     {
-
+        $request->validate([
+            'task' => 'required|string|max:255',
+            'deadline' => 'required|date',
+            'status' => 'required|in:pending,completed',
+        ]);
+    
+        $task = Task::find($id);
+    
+        if (!$task) {
+            return response()->json(['success' => false, 'message' => 'Task not found.'], 404);
+        }
+    
+        $task->task = $request->input('task');
+        $task->deadline = $request->input('deadline');
+        $task->status = $request->input('status');
+        $task->save();
+    
+        return response()->json([
+            'success' => true,
+            'id' => $task->id,
+            'task' => $task->task,
+            'deadline' => $task->deadline,
+            'status' => $task->status,
+            'user_name' => $task->user->name
+        ]);
     }
 
     /**
@@ -100,6 +133,13 @@ class TaskController extends Controller
      */
     public function delete($id)
     {
-       
+        $task = Task::find($id);
+
+        if ($task) {
+            $task->delete();
+            return response()->json(['success' => true]);
+        }
+
+        return response()->json(['success' => false], 404);
     }
 }
