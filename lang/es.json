@@ -270,5 +270,7 @@
     "To Do List":"Lista de tareas pendientes",
     "Status": "Estado",
     "Create Tasks":"Crear Tareas",
-    "Complete": "Completar"
+    "Complete": "Completar",
+    "View tasks":"Ver tareas",
+    "Edit tasks":"Editar tareas"
 }
